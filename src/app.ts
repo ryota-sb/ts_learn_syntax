@@ -128,3 +128,20 @@
 //   banana: 100,
 //   melon: 900,
 // };
+
+// オプショナルプロパティ（あってもなくてもいいプロパティ）
+type MyObj = {
+  foo: boolean;
+  bar: boolean;
+  baz?: number;
+};
+
+const obj: MyObj = {
+  foo: true,
+  bar: false,
+  baz: 100,
+};
+
+if (obj.baz !== undefined) {
+  console.log(obj.baz * 2);
+}
