@@ -75,3 +75,56 @@
 // };
 
 // console.log(user.userName);
+
+// import { createInterface } from "readline";
+
+// const rl = createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// const messages = {
+//   good: "0以上の数値です",
+//   bad: "負の数です。",
+// };
+
+// rl.question("数字を入力してください", (line) => {
+//   const num = Number(line);
+//   console.log(messages[num >= 0 ? "good" : "bad"]);
+//   rl.close;
+// });
+
+// const obj1 = {
+//   name: "ryota",
+//   age: 27,
+// };
+
+// const obj2 = {
+//   ...obj1,
+//   name: "MatsuiRyota",
+//   age: 30,
+// };
+
+// console.log(obj1.name);
+// console.log(obj2.name);
+
+// type FoobarObj = {
+//   foo: string;
+//   bar: number;
+// };
+
+// const obj: FoobarObj = {
+//   foo: "helloWorld",
+//   bar: 123,
+// };
+
+// インデックスシグネチャ（任意のプロパティ名を許容する型）
+// type PriceData = {
+//   [key: string]: number;
+// };
+
+// const foodPrice: PriceData = {
+//   apple: 200,
+//   banana: 100,
+//   melon: 900,
+// };
