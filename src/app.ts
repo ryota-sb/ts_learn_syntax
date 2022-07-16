@@ -130,18 +130,54 @@
 // };
 
 // オプショナルプロパティ（あってもなくてもいいプロパティ）
-type MyObj = {
-  foo: boolean;
-  bar: boolean;
-  baz?: number;
+// type MyObj = {
+//   foo: boolean;
+//   bar: boolean;
+//   baz?: number;
+// };
+
+// const obj: MyObj = {
+//   foo: true,
+//   bar: false,
+//   baz: 100,
+// };
+
+// if (obj.baz !== undefined) {
+//   console.log(obj.baz * 2);
+// }
+
+// type FooBar = {
+//   foo: string;
+//   bar: number;
+// };
+
+// type FooBarBaz = {
+//   foo: string;
+//   bar: number;
+//   baz: boolean;
+// };
+
+// const obj: FooBarBaz = {
+//   foo: "Hello",
+//   bar: 100,
+//   baz: true,
+// };
+
+// const obj2: FooBar = obj;
+
+// console.log(obj2);
+
+// ジェネリック型の定義（型引数の宣言）
+type Family<Parent, Child> = {
+  mother: Parent;
+  father: Parent;
+  child: Child;
 };
 
-const obj: MyObj = {
-  foo: true,
-  bar: false,
-  baz: 100,
+const obj: Family<number, string> = {
+  mother: 41,
+  father: 40,
+  child: "15",
 };
 
-if (obj.baz !== undefined) {
-  console.log(obj.baz * 2);
-}
+console.log(obj);
