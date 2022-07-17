@@ -168,16 +168,24 @@
 // console.log(obj2);
 
 // ジェネリック型の定義（型引数の宣言）
-type Family<Parent, Child> = {
-  mother: Parent;
-  father: Parent;
-  child: Child;
-};
+// type Family<Parent, Child> = {
+//   mother: Parent;
+//   father: Parent;
+//   child: Child;
+// };
 
-const obj: Family<number, string> = {
-  mother: 41,
-  father: 40,
-  child: "15",
-};
+// const obj: Family<number, string> = {
+//   mother: 41,
+//   father: 40,
+//   child: "15",
+// };
 
-console.log(obj);
+// console.log(obj);
+
+// const array: number[] = [1, 100, 200, 400];
+
+// console.log(array.push(1000));
+// console.log(array);
+
+// 配列の読み取り専用
+// const array: readonly number[] = [1, 100, 300, 500];
