@@ -240,9 +240,136 @@
 
 // console.log(bar, baz);
 
-// 配列の分割代入
-const array: readonly number[] = [100, 200, 300, 400];
+// // 配列の分割代入
+// const array: readonly number[] = [100, 200, 300, 400];
 
-const [f, s, t, fo] = array;
+// const [f, s, t, fo] = array;
 
-console.log(f, s, t);
+// console.log(f, s, t);
+
+// // restパターンでオブジェクトの残り要素を取得する方法
+// const obj = {
+//   foo: "string",
+//   bar: 100,
+//   baz: false,
+// };
+
+// const { foo, ...rest } = obj;
+
+// console.log(rest);
+
+// const array = [1, 2, 3, 4, 5];
+
+// const [f, ...rest] = array;
+
+// console.log(rest);
+
+// const date = new Date();
+
+// console.log(date.toISOString);
+
+// type User = {
+//   name: string;
+//   age: number;
+//   premiumUser: boolean;
+// };
+
+// const data: string = `
+// uhyo,26,1
+// John Smith,17,0
+// Mary Sue,14,1
+// `;
+
+// const users: User[] = [];
+
+// const lines = data.split("\n");
+
+// for (const line of lines) {
+//   if (line === "") {
+//     continue;
+//   }
+//   const [name, ageString, premiumUserString] = line.split(",");
+//   const age = Number(ageString);
+//   const premiumUser = premiumUserString === "1";
+
+//   users.push({
+//     name,
+//     age,
+//     premiumUser,
+//   });
+// }
+
+// for (const user of users) {
+//   if (user.premiumUser) {
+//     console.log(`${user.name}(${user.age})は、プレミアムユーザーです。`);
+//   } else {
+//     console.log(
+//       `${user.name}(${user.age})は、プレミアムユーザーではありません。`
+//     );
+//   }
+// }
+
+// type User = {
+//   name: string;
+//   age: number;
+//   premiumUser: boolean;
+// };
+
+// const data: string = `
+// // uhyo,26,1
+// // John Smith,17,0
+// // Mary Sue,14,1
+// // `;
+
+// const users: User[] = data
+//   .split("\n")
+//   .filter((line) => line !== "")
+//   .map((line) => {
+//     const [name, ageString, premiumUserString] = line.split(",");
+//     return {
+//       name: name,
+//       age: Number(ageString),
+//       premiumUser: premiumUserString === "1",
+//     };
+//   });
+
+// for (const user of users) {
+//   if (user.premiumUser) {
+//     console.log(`${user.name}(${user.age})は、プレミアムユーザーです。`);
+//   } else {
+//     console.log(
+//       `${user.name}(${user.age})は、プレミアムユーザーではありません。`
+//     );
+//   }
+// }
+
+// function range(min: number, max: number): number[] {
+//   const result = [];
+//   for (let i = min; i <= max; i++) {
+//     result.push(i);
+//   }
+//   return result;
+// }
+
+// console.log(range(5, 20));
+
+// function helloworldtimes(n: number): void {
+//   for (let i = 0; i < n; i++) {
+//     console.log("helloworld");
+//   }
+// }
+
+// helloworldtimes(10);
+
+// type Human = {
+//   height: number;
+//   width: number;
+// };
+
+// const bmiCalc = function ({ height, width }: Human): number {
+//   return height / width ** 2;
+// };
+
+// const ryota: Human = { height: 1.7, width: 50 };
+
+// console.log(bmiCalc(ryota));
