@@ -189,3 +189,41 @@
 
 // 配列の読み取り専用
 // const array: readonly number[] = [1, 100, 300, 500];
+
+// const array: readonly number[] = [100, 200, 300];
+// for (let arr of array) {
+//   arr *= 10;
+//   console.log(arr);
+// }
+
+// console.log(array);
+
+// 分割代入
+// type Obj = {
+//   foo: number;
+//   bar: number;
+// };
+
+// const obj: Obj = {
+//   foo: 10000,
+//   bar: 27,
+// };
+
+// const { foo, bar } = obj;
+
+// console.log(foo, bar);
+
+// const obj = {
+//   foo: 100,
+//   barbaz: {
+//     bar: 200,
+//     baz: 300,
+//   },
+// };
+
+// const {
+//   foo,
+//   barbaz: { bar, baz },
+// } = obj;
+
+// console.log(foo, bar, baz);
