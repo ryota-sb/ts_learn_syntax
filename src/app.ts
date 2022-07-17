@@ -227,3 +227,22 @@
 // } = obj;
 
 // console.log(foo, bar, baz);
+
+// const obj = {
+//   foo: 100,
+//   barbaz: {
+//     bar: 200,
+//     baz: 300,
+//   },
+// };
+
+// const { bar, baz } = obj.barbaz;
+
+// console.log(bar, baz);
+
+// 配列の分割代入
+const array: readonly number[] = [100, 200, 300, 400];
+
+const [f, s, t, fo] = array;
+
+console.log(f, s, t);
