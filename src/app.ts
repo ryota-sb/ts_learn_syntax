@@ -402,3 +402,11 @@
 // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // console.log(sum(...nums));
+
+// const sum3 = (a: number, b: number, c: number) => a + b + c;
+
+// type tNumber = [number, number, number];
+
+// const nums: tNumber = [1, 2, 3];
+
+// console.log(sum3(...nums));
