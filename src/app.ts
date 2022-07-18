@@ -343,6 +343,7 @@
 //   }
 // }
 
+// 関数宣言
 // function range(min: number, max: number): number[] {
 //   const result = [];
 //   for (let i = min; i <= max; i++) {
@@ -361,6 +362,7 @@
 
 // helloworldtimes(10);
 
+// 関数式
 // type Human = {
 //   height: number;
 //   width: number;
@@ -373,3 +375,30 @@
 // const ryota: Human = { height: 1.7, width: 50 };
 
 // console.log(bmiCalc(ryota));
+
+// アロー関数式
+// type Human = {
+//   height: number;
+//   width: number;
+// };
+
+// const calcBMI = ({ height, width }: Human): number => {
+//   return height / width ** 2;
+// };
+
+// const ryota: Human = { height: 1.7, width: 50 };
+
+// console.log(calcBMI(ryota));
+
+// 可変長引数
+// const sum = (...args: number[]): number => {
+//   let result = 0;
+//   for (const num of args) {
+//     result += num;
+//   }
+//   return result;
+// };
+
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// console.log(sum(...nums));
