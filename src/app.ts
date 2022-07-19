@@ -488,3 +488,11 @@
 
 // console.log(ryota.name);
 // console.log(ryota.isAdult());
+
+// class User<T> {
+//   constructor(public name: string, private age: number, public data: T) {}
+// }
+
+// const ryota: User<string> = new User("ryota", 27, "何でもおk");
+
+// console.log(ryota);
