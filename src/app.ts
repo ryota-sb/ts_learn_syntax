@@ -410,3 +410,58 @@
 // const nums: tNumber = [1, 2, 3];
 
 // console.log(sum3(...nums));
+
+//ジェネリックス
+// function repeat<T>(element: T, length: number): T[] {
+//   const result: T[] = [];
+//   for (let i = 0; i < length; i++) {
+//     result.push(element);
+//   }
+//   return result;
+// }
+
+// console.log(repeat<string>("a", 5));
+
+// const getFizzBuzzString = (i: number) => {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     return "FizzBuzz";
+//   } else if (i % 3 === 0) {
+//     return "Fizz";
+//   } else if (i % 5 === 0) {
+//     return "Buzz";
+//   } else {
+//     return i;
+//   }
+// };
+
+// for (let i = 1; i <= 100; i++) {
+//   const message = getFizzBuzzString(i);
+//   console.log(message);
+// }
+
+// function sequence(start: number, end: number): number[] {
+//   const result: number[] = [];
+//   for (let i = start; i <= end; i++) {
+//     result.push(i);
+//   }
+//   return result;
+// }
+
+// for (const i of sequence(1, 100)) {
+//   const message = getFizzBuzzString(i);
+//   console.log(message);
+// }
+
+// function map<T, U>(array: T[], callback: (value: T) => U): U[] {
+//   const result: U[] = [];
+//   for (const element of array) {
+//     result.push(callback(element));
+//   }
+//   return result;
+// }
+
+// const data = [1, -3, -2, -2, 8, 0, -1];
+
+// const result: boolean[] = map(data, (x) => x >= 0);
+
+// console.log(result);
