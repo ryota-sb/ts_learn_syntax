@@ -4,6 +4,8 @@
 // }
 // console.log(message(10));
 
+import { Type } from "typescript";
+
 // 引数の型によって出力を変える
 // function message(value: number | string) {
 //   if (typeof value === "number") {
@@ -496,3 +498,29 @@
 // const ryota: User<string> = new User("ryota", 27, "何でもおk");
 
 // console.log(ryota);
+
+class User {
+  name: string;
+  #age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.#age = age;
+  }
+
+  public isAdult(): boolean {
+    return this.#age >= 20;
+  }
+}
+
+class PremiumUser extends User {
+  rank: number = 1;
+}
+
+const getMessage = (u: User) => {
+  return `こんにちは、${u.name}さん`;
+};
+
+const ryota = new PremiumUser("ryota", 27);
+
+console.log(getMessage(ryota));
