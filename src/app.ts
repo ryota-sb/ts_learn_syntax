@@ -499,28 +499,55 @@ import { Type } from "typescript";
 
 // console.log(ryota);
 
-class User {
-  name: string;
-  #age: number;
+// class User {
+//   name: string;
+//   #age: number;
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.#age = age;
-  }
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.#age = age;
+//   }
 
-  public isAdult(): boolean {
-    return this.#age >= 20;
-  }
+//   public isAdult(): boolean {
+//     return this.#age >= 20;
+//   }
+// }
+
+// class PremiumUser extends User {
+//   rank: number = 1;
+// }
+
+// const getMessage = (u: User) => {
+//   return `こんにちは、${u.name}さん`;
+// };
+
+// const ryota = new PremiumUser("ryota", 27);
+
+// console.log(getMessage(ryota));
+
+// class User {
+//   readonly name: string;
+//   readonly age: number;
+
+//   constructor(name: string, age: number) {
+//     if (name === "") {
+//       throw new Error("名前は空にできません！");
+//     }
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   getMessage(message: string): string {
+//     return `${this.name}(${this.age})「${message}」`;
+//   }
+// }
+
+function createUser(name: string, age: number) {
+  return (message: string) => {
+    return `${name}(${age})「${message}」`;
+  };
 }
 
-class PremiumUser extends User {
-  rank: number = 1;
-}
+const getMessage = createUser("ryota", 27);
 
-const getMessage = (u: User) => {
-  return `こんにちは、${u.name}さん`;
-};
-
-const ryota = new PremiumUser("ryota", 27);
-
-console.log(getMessage(ryota));
+console.log(getMessage("Hello World!!"));
