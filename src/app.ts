@@ -542,12 +542,17 @@ import { Type } from "typescript";
 //   }
 // }
 
-function createUser(name: string, age: number) {
-  return (message: string) => {
-    return `${name}(${age})「${message}」`;
-  };
-}
+// function createUser(name: string, age: number) {
+//   return (message: string) => {
+//     return `${name}(${age})「${message}」`;
+//   };
+// }
 
-const getMessage = createUser("ryota", 27);
+// const getMessage = createUser("ryota", 27);
 
-console.log(getMessage("Hello World!!"));
+// console.log(getMessage("Hello World!!"));
+
+// const signNumber = (type: "plus" | "minus") => (type === "plus" ? 1 : -1);
+
+// console.log(signNumber("plus"));
+// console.log(signNumber("minus"));
