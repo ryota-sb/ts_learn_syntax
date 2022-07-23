@@ -556,3 +556,32 @@ import { Type } from "typescript";
 
 // console.log(signNumber("plus"));
 // console.log(signNumber("minus"));
+
+// type Human = {
+//   tag: "human";
+//   name: string;
+// };
+
+// type Animal = {
+//   tag: "animal";
+//   species: string;
+// };
+
+// type User = Human | Animal;
+
+// const getUserName = (user: User): string => {
+//   switch (user.tag) {
+//     case "human":
+//       return user.name;
+//     case "animal": {
+//       return user.species;
+//     }
+//   }
+// };
+
+// const user01: User = {
+//   tag: "human",
+//   name: "ryota",
+// };
+
+// console.log(getUserName(user01));
